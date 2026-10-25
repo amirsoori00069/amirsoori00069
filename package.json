@@ -1,0 +1,21 @@
+{
+  "name": "aspina-analysis-studio",
+  "private": true,
+  "version": "0.1.0",
+  "packageManager": "pnpm@10.33.4",
+  "scripts": {
+    "dev": "pnpm --parallel --filter @aspina/api --filter @aspina/web dev",
+    "dev:api": "pnpm --filter @aspina/api dev",
+    "dev:web": "pnpm --filter @aspina/web dev",
+    "build": "pnpm --filter @aspina/api build && pnpm --filter @aspina/web build",
+    "start:api": "pnpm --filter @aspina/api start"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}
